@@ -1,16 +1,10 @@
 class LinkedListNode {
-  get next(): null {
-    return this._next;
-  }
-  get value(): any {
-    return this._value;
-  }
-  private _value: any;
-  private _next: null;
-  constructor(value: any, next: null = null) {
-    this._value = value;
-    this._next = next;
+  value: any;
+  next: any;
+  constructor(value: any, next?: any) {
+    this.value = value;
+    this.next = next || null;
   }
 }
 
-export default LinkedListNode
+export default LinkedListNode;
