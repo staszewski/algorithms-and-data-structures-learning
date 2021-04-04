@@ -4,6 +4,7 @@ interface LinkedListInterface {
   append(value: number): this;
   prepend(value: number): this;
   remove(value: number): LinkedListNode | null;
+  contains(value: number): boolean;
   toArray(): number[];
 }
 
@@ -20,7 +21,8 @@ class LinkedList implements LinkedListInterface {
       return this;
     }
 
-    this.tail ? (this.tail.next = node) : null;
+    // @ts-ignore
+    this.tail?.next = node || null;
     this.tail = node;
 
     return this;
@@ -66,6 +68,19 @@ class LinkedList implements LinkedListInterface {
     }
 
     return deletedNode;
+  }
+
+  contains(value: number): boolean {
+    if (this.head === null) {
+      return false;
+    }
+    let currentNode = this.head;
+    if (currentNode !== null) {
+      while (currentNode?.value !== value) {
+        currentNode = currentNode?.next;
+      }
+    }
+    return true;
   }
 
   toArray(): number[] {

@@ -64,3 +64,20 @@ Remove(head, value)
   return false
 end Remove
 ```
+
+### Contains
+```markdown
+Contains(head, value)
+  Pre: head is the head node in the list
+       value is the value to search for
+  Post: the item is either in the linked list, true; otherwise false
+  n ← head
+  while n != ø and n.value != value
+    n ← n.next
+  end while
+  if n = ø
+    return false
+  end if
+  return true
+end Contains
+```
