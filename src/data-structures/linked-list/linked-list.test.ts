@@ -1,4 +1,4 @@
-import LinkedList from '../src/data-structures/linked-list/linked-list';
+import LinkedList from './linked-list';
 
 test('defaults head and tail to null', () => {
   const linkedList = new LinkedList();
