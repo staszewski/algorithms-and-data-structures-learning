@@ -8,4 +8,4 @@ const sum = (arr: number[]): any => {
   }
 };
 
-export default sum
+export default sum;
