@@ -1,4 +1,4 @@
-import LinkedListNode from '../src/data-structures/linked-list/linked-list-node';
+import LinkedListNode from './linked-list-node';
 
 test('creates node with correct value and initial next of null', () => {
   const node = new LinkedListNode(1);
