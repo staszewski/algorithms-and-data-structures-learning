@@ -1,8 +1,8 @@
 interface HashTableInterface {
   hash(key: string): void;
   insertItem(key: any, value: any): void;
-  getItem(key: any): void
-  updateItem(key: any, value: any): boolean
+  getItem(key: any): void;
+  updateItem(key: any, value: any): boolean;
 }
 
 class HashTable implements HashTableInterface {
@@ -19,16 +19,16 @@ class HashTable implements HashTableInterface {
     return h % this.bucketSize;
   }
   insertItem(key: any, value: any) {
-    return this.table[this.hash(key)] = value;
+    return (this.table[this.hash(key)] = value);
   }
   getItem(key: any) {
     return this.table[this.hash(key)];
   }
   updateItem(key: any, value: any): boolean {
     if (this.table[this.hash(key)] === undefined) {
-      return false
+      return false;
     } else {
-      return this.table[this.hash(key)] = value;
+      return (this.table[this.hash(key)] = value);
     }
   }
 }

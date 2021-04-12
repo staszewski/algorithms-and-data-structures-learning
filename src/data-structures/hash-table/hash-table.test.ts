@@ -21,12 +21,11 @@ test('inserting / getting also works on non primitive values', () => {
 
 test('returns false when there is no item to update', () => {
   const hashTable = new HashTable();
-  expect(hashTable.updateItem("12344", [1232131])).toBeFalsy()
+  expect(hashTable.updateItem('12344', [1232131])).toBeFalsy();
 });
 
 test('updates (or actually inserts) item', () => {
   const hashTable = new HashTable();
-  hashTable.insertItem({ x: "934asd" }, 1337);
-  expect(hashTable.getItem({ x: "934asd" })).toEqual(1337);
-
+  hashTable.insertItem({ x: '934asd' }, 1337);
+  expect(hashTable.getItem({ x: '934asd' })).toEqual(1337);
 });
