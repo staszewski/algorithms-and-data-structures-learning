@@ -1,4 +1,4 @@
-const sum = (arr: number[]): any => {
+const sum = (arr: number[]): number => {
   const [, ...rest] = arr;
 
   if (arr.length === 0) {
