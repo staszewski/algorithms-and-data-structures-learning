@@ -14,6 +14,14 @@ const largestSubarraySum = (arr: number[], k: number): number[] => {
   return maxSumArray;
 };
 
-test('should ', () => {
+test('returns subarray with the largest sum - 3 elements', () => {
   expect(largestSubarraySum([3, 1, 4, 1, 5, 9, 2, 6], 3)).toEqual([9, 2, 6]);
+});
+
+test('returns subarray with the largest sum - 4 elements', () => {
+  expect(largestSubarraySum([3, 1, 4, 1, 5, 9, 2, 6], 4)).toEqual([5, 9, 2, 6]);
+});
+
+test('returns subarray with the largest sum - 1 element', () => {
+  expect(largestSubarraySum([3, 1, 4, 1, 5, 9, 2, 6], 1)).toEqual([9]);
 });
